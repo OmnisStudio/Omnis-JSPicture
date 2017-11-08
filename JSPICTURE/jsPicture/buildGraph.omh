@@ -1,0 +1,15 @@
+Do iGraphObj.$majortype.$assign(iGraphType)
+Do iGraphObj.$3d.$assign(kTrue)
+
+Do iGraphObj.$dataname.$assign(iData) Returns #F
+
+;  Calculate lHeight as $cclass.$objs.Picture.$height
+;  Calculate lWidth as $cclass.$objs.Picture.$width
+Calculate lHeight as pHeight
+Calculate lWidth as pWidth
+
+Do iGraphObj.$snapshot(lWidth,lHeight) Returns lSnapShot
+
+Do pictformat(lSnapShot) Returns lPicFormat
+Do pictconvto(lPicFormat,lSnapShot,'png') Returns iGraph
+Calculate iGraph as bytecon(iGraph,"")

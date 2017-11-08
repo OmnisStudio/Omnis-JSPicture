@@ -1,0 +1,8 @@
+On evLayoutChanged
+	If pBreakpoint=310
+		Calculate iWidth as 300
+	Else
+		Calculate iWidth as 580
+	End If
+	
+	Do method buildGraph ($cinst.$objs.Picture.$height,iWidth)

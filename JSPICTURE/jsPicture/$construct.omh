@@ -1,0 +1,19 @@
+;  Enter your initialization code here
+
+If $cwind().$name<>$cclass().$name     ;; form is in a subwindow
+	Do $cwind.$getConstructRow Returns pRow
+End If
+
+If pos('devicePixelRatio:2',pRow.jsDeviceInfo)     ;; scale graph image on hi res devices
+	Do $cinst.$objs.Picture.$noscale.$assign(kFalse)
+Else
+	Do $cinst.$objs.Picture.$noscale.$assign(kTrue)
+End If
+
+Calculate iGraphType as kG2pie
+
+Do iData.$define(iLabel,iValue)
+Do iData.$add('Mark',7)
+Do iData.$add('James',20)
+Do iData.$add('Harry',10)
+Do iData.$add('Sally',9)

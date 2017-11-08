@@ -1,0 +1,3 @@
+On evClick
+	Calculate iGraphType as pick(iGraphType=kG2xy,kG2xy,kG2pie)
+	Do method buildGraph ($cinst.$objs.Picture.$height,iWidth)
